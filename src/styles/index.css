@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+/* KaTeX mathematical formula rendering */
+.katex-container {
+  display: inline-block;
+  font-size: 1.1em;
+}
+
+.katex-display {
+  display: block;
+  margin: 1em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.katex-container .base {
+  display: inline;
+}
+
+.katex-container .mord {
+  display: inline;
+}
+
+.katex-container .mop {
+  display: inline;
+}
+
+.katex-container .mbin {
+  display: inline;
+}
+
+.katex-container .mrel {
+  display: inline;
+}
+
+.katex-container .mopen {
+  display: inline;
+}
+
+.katex-container .mclose {
+  display: inline;
+}
+
+.katex-container .mpunct {
+  display: inline;
+}
+
+.katex-container .msqrt {
+  display: inline;
+}
+
+.katex-container .vlist-t {
+  display: inline-table;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.katex-container .vlist-r {
+  display: table-row;
+}
+
+.katex-container .vlist {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+}
+
+.katex-container .vlist > span {
+  display: block;
+  position: relative;
+}
+
+.katex-inline {
+  display: inline;
+  font-size: 1.1em;
+}
+
+.katex-formula-inline {
+  display: inline;
+  font-size: 1.1em;
+  margin: 0 0.15em;
+  vertical-align: middle;
+}
+
+.katex-formula-display {
+  display: block;
+  margin: 1em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+  padding: 0.5em 0;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.katex-display {
+  overflow: auto hidden !important;
+  display: block !important;
+  margin: 0.5em 0 !important;
+  text-align: center !important;
+  max-width: 100% !important;
+}
+
+.katex-display > .katex {
+  display: inline-block;
+  white-space: normal;
+  padding: 0.5em;
+}
+
+.katex-display-block {
+  display: block;
+  margin: 1em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+  padding: 0.5em 0;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.chat-message-content {
+  max-width: min(42rem, 85vw);
+  overflow-x: visible;
+}
+
+.chat-container {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.chat-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+.input-panel-sticky {
+  position: sticky;
+  bottom: 0;
+  background: white;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+/* Global theme overrides */
+:root {
+  --primary: #1890ff;
+  --primary-hover: #40a9ff;
+  --border-radius: 8px;
+}
+
+/* 卡片统一圆角与阴影 */
+.ant-card {
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+/* 按钮圆角 */
+.ant-btn {
+  border-radius: var(--border-radius);
+}
+
+/* 输入框圆角 */
+.ant-input,
+.ant-input-password,
+.ant-select-selector {
+  border-radius: var(--border-radius);
+}
+
+/* 主色调覆盖 */
+.ant-layout-header {
+  background: var(--primary);
+}
+
+/* 链接颜色 */
+a {
+  color: var(--primary);
+}
+a:hover {
+  color: var(--primary-hover);
+}
